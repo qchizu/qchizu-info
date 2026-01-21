@@ -6,10 +6,59 @@
 
 ## 技術スタック
 
-- **SSG**: Astro
-- **記事形式**: Markdown（フロントマター付き）
+- **SSG**: Astro 5.x
+- **記事形式**: Markdown（Content Collections）
 - **ホスティング**: Xserver
 - **デプロイ**: GitHub Actions（タグ push でトリガー）
+
+---
+
+## 進捗状況
+
+### 完了した事項
+
+- [x] Astroプロジェクト初期化
+- [x] ディレクトリ構造作成
+- [x] Content Collections設定（`src/content.config.ts`）
+- [x] レイアウト実装（`Base.astro`, `Article.astro`）
+- [x] コンポーネント実装（`Header.astro`, `Footer.astro`）
+- [x] ページ実装（`index.astro`, `[slug].astro`）
+- [x] WordPress移行スクリプト作成（`scripts/migrate-wp.js`）
+- [x] WordPress記事移行実行（34記事: 投稿8件、固定ページ26件）
+- [x] 画像ファイル移行（日本語ファイル名対応済み）
+- [x] GitHub Actionsデプロイワークフロー作成（`.github/workflows/deploy.yml`）
+- [x] GitHubリポジトリ作成・push（https://github.com/qchizu/qchizu-info プライベート）
+- [x] トップページをpost-21の内容に変更
+
+### 未完了の事項
+
+- [ ] **CSSの調整**
+  - 現行サイトをベースにし、テーマカラー（#E6B422）は維持
+  - より洗練された見やすいデザインに改善
+
+- [ ] **記事の構成整理**
+  - 固定ページと投稿に分類
+  - 構成を整理し、ナビゲーションを改善
+
+- [ ] **各記事の記載内容整理**
+  - 内容の確認・更新
+  - 必要に応じて記事を統合
+
+- [ ] **記事の書き方の整理**
+  - 公用文の書き方に倣う
+  - 例: 「及び」「又は」「御利用」など
+
+- [ ] **GitHub Secretsの登録**
+  - `SSH_PRIVATE_KEY`: SSH秘密鍵
+  - `SSH_HOST`: Xserverホスト名
+  - `SSH_USER`: SSHユーザー名
+  - 既存のqchizuリポジトリと共有可能
+
+- [ ] **リダイレクト設定**
+  - 現行サイトのURLから一部変更になるため、リダイレクトを設定
+  - `.htaccess` または Xserver側で対応
+
+---
 
 ## ディレクトリ構成
 
@@ -19,14 +68,21 @@ qchizu-info/
 │   ├── content/
 │   │   └── articles/       # 記事（*.md）
 │   ├── layouts/
+│   │   ├── Base.astro      # 共通HTMLレイアウト
 │   │   └── Article.astro   # 記事レイアウト
+│   ├── components/
+│   │   ├── Header.astro
+│   │   └── Footer.astro
 │   └── pages/
-│       ├── index.astro     # トップページ
+│       ├── index.astro     # トップページ（post-21の内容）
 │       └── [slug].astro    # 記事ページ
 ├── public/
 │   └── images/             # 画像ファイル
-├── docs/
-│   └── map-spec.md         # 地図ページ仕様書（参照用）
+├── scripts/
+│   └── migrate-wp.js       # WordPress移行スクリプト
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # デプロイワークフロー
 └── astro.config.mjs
 ```
 
@@ -55,13 +111,21 @@ order: 10
 |------|------|------|
 | title | ○ | ページタイトル |
 | description | ○ | 概要（100文字程度） |
-| date | ○ | 作成日または更新日 |
+| date | ○ | 作成日又は更新日 |
 | order | - | メニュー表示順（小さい順） |
+
+### 表記ルール（公用文の書き方）
+
+| 項目 | 表記例 |
+|------|--------|
+| 接続詞 | 及び、並びに、又は、若しくは |
+| 敬語 | 御利用、御覧、御確認 |
+| 送り仮名 | 行う、行なう→行う |
 
 ## デプロイ手順
 
 1. 記事を編集・追加
-2. main ブランチに push
+2. main/master ブランチに push
 3. タグを作成: `git tag 2024-01-15 && git push origin 2024-01-15`
 4. GitHub Actions が自動でビルド・デプロイ
 
@@ -77,33 +141,24 @@ order: 10
 
 ---
 
-## WordPress移行
+## WordPress移行（完了）
 
 ### 移行元
 
 - URL: https://info.qchizu.jp
-- 対象: 投稿（post）および固定ページ（page）
-- 記事数: 約30件
+- 対象: 投稿（post）及び固定ページ（page）
+- 記事数: 34件（投稿8件、固定ページ26件）
 
-### 移行スクリプトの要件
-
-1. **記事取得**: WordPress REST API から投稿・固定ページを取得
-2. **Markdown変換**: HTML本文をMarkdownに変換
-3. **フロントマター生成**: title, description, date を付与
-4. **画像ダウンロード**: 記事内の画像を `/public/images/` に保存し、パスを書き換え
-5. **出力先**: `src/content/articles/{slug}.md`
-
-### 実行方法
+### 移行スクリプト
 
 ```bash
 # 移行スクリプト実行
-node scripts/migrate-wp.js
-
+npm run migrate
 # または
-python scripts/migrate_wp.py
+node scripts/migrate-wp.js
 ```
 
 ### 注意事項
 
-- WordPress REST APIが有効であること（通常はデフォルトで有効）
-- 移行後、手動で内容を確認・調整する
+- 移行済みの記事は手動で内容を確認・調整すること
+- 日本語ファイル名の画像はURLデコード済み
