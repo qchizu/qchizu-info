@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p 10022 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: |
+          rsync -avz --delete \
+            -e "ssh -p 10022" \
+            --exclude '.git' \
+            --exclude '.github' \
+            ./dist/ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/

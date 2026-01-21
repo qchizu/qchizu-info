@@ -1,0 +1,29 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const topPage = await getEntry('articles', 'post-21');
+const { Content } = topPage ? await render(topPage) : { Content: null };
+---
+
+<Base title="全国Q地図" description="地理院地図を拡張した、各種地形図・地図情報の統合閲覧サイト">
+  <Header />
+  <main>
+    <div class="top-content">
+      {Content ? <Content /> : <p>コンテンツが見つかりません。</p>}
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .top-content {
+    line-height: 1.8;
+  }
+
+  .top-content :global(img) {
+    margin: 0.5rem 0;
+  }
+</style>
