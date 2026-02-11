@@ -72,8 +72,10 @@
 
 #### 3. 本番環境への移行（詳細は「本番環境移行手順」セクションを参照）
 
-- [ ] **手順1: WordPressのバックアップ**
+- [x] **手順1: WordPressのバックアップ**
   - Xserver サーバーパネルからファイル及びデータベースのバックアップを取得
+  - ファイル: `~/wp-backup-info-20260211.tar.gz`（2.2GB）
+  - DB: `~/wp-db-backup-20260211.sql`（24MB）
 - [x] **手順2: プロジェクト設定の変更** ← 完了済み
   - `astro.config.mjs` の `site` を `https://info.qchizu.jp` に変更
   - `deploy.yml` のデプロイ先を本番ディレクトリに変更
@@ -81,19 +83,19 @@
   - `public/robots.txt` 作成（サイトマップURL記載）
   - `public/.htaccess` 作成（WordPress旧URL→新URLの301リダイレクト）
   - Google Search Console 所有権確認（GA4による自動確認で完了）
-- [ ] **手順3: WordPressファイルの退避**（Xserver SSH操作）← 次はここから
-  - `/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/` 内のファイルを退避
-- [ ] **手順4: Astroサイトのデプロイ**
-  - タグ push で GitHub Actions 自動デプロイ
+- [x] **手順3: WordPressファイルの退避**（Xserver SSH操作）
+  - `/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/` 内のファイルを `info.qchizu.jp.wp-backup/` に退避済み
+- [x] **手順4: Astroサイトのデプロイ**
+  - タグ `v20260211-2` で GitHub Actions 自動デプロイ完了
 - [x] **手順5: リダイレクト設定**（`.htaccess`）← 完了済み
   - WordPress旧URL（投稿8件・固定ページ22件）から新URLへの301リダイレクト
   - `wp-content/uploads/` 画像パスの `/images/` へのリダイレクト
   - WordPress管理画面・API URL の 410 Gone 設定
   - クエリパラメーター形式（`?p=123`）のトップへのリダイレクト
-- [ ] **手順6: 動作確認**
-- [ ] **手順7: 後片付け**（WordPress バックアップ・データベースの削除）
-- [ ] **手順8: Search Console でサイトマップ送信**
-  - デプロイ完了後に `https://info.qchizu.jp/sitemap-index.xml` を送信
+- [x] **手順6: 動作確認**
+- [ ] **手順7: 後片付け**（WordPress バックアップ・データベースの削除）← 1〜2週間後に実施
+- [x] **手順8: Search Console でサイトマップ送信**
+  - `https://info.qchizu.jp/sitemap-index.xml` を送信済み
 
 ---
 

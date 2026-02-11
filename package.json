@@ -6,14 +6,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "migrate": "node scripts/migrate-wp.js"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.16.11"
   },
-  "devDependencies": {
-    "turndown": "^7.2.0"
-  }
+  "devDependencies": {}
 }
