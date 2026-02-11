@@ -32,6 +32,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title === '全国Q地図' ? title : `${title} | 全国Q地図`} />
     <meta name="twitter:description" content={description} />
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK97B0X6FZ" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JK97B0X6FZ');
+    </script>
   </head>
   <body>
     <slot />
