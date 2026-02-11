@@ -74,24 +74,26 @@
 
 - [ ] **手順1: WordPressのバックアップ**
   - Xserver サーバーパネルからファイル及びデータベースのバックアップを取得
-- [x] **手順2: プロジェクト設定の変更**
+- [x] **手順2: プロジェクト設定の変更** ← 完了済み
   - `astro.config.mjs` の `site` を `https://info.qchizu.jp` に変更
   - `deploy.yml` のデプロイ先を本番ディレクトリに変更
   - `@astrojs/sitemap` インテグレーション導入
   - `public/robots.txt` 作成（サイトマップURL記載）
   - `public/.htaccess` 作成（WordPress旧URL→新URLの301リダイレクト）
-  - Google Search Console 検証用メタタグをBase.astroに追加
-- [ ] **手順3: WordPressファイルの退避**（Xserver SSH操作）
+  - Google Search Console 所有権確認（GA4による自動確認で完了）
+- [ ] **手順3: WordPressファイルの退避**（Xserver SSH操作）← 次はここから
   - `/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/` 内のファイルを退避
 - [ ] **手順4: Astroサイトのデプロイ**
   - タグ push で GitHub Actions 自動デプロイ
-- [x] **手順5: リダイレクト設定**（`.htaccess`）
+- [x] **手順5: リダイレクト設定**（`.htaccess`）← 完了済み
   - WordPress旧URL（投稿8件・固定ページ22件）から新URLへの301リダイレクト
   - `wp-content/uploads/` 画像パスの `/images/` へのリダイレクト
   - WordPress管理画面・API URL の 410 Gone 設定
   - クエリパラメーター形式（`?p=123`）のトップへのリダイレクト
 - [ ] **手順6: 動作確認**
 - [ ] **手順7: 後片付け**（WordPress バックアップ・データベースの削除）
+- [ ] **手順8: Search Console でサイトマップ送信**
+  - デプロイ完了後に `https://info.qchizu.jp/sitemap-index.xml` を送信
 
 ---
 
