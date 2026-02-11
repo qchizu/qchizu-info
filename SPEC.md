@@ -11,7 +11,7 @@
 - **記事形式**: Markdown（Content Collections）
 - **ホスティング**: Xserver
 - **デプロイ**: GitHub Actions（`v*` タグ push でトリガー）
-- **テスト環境**: https://test-info.qchizu.jp （構築中）
+- **テスト環境**: https://test-info.qchizu.jp （構築済み）
 - **本番環境**: https://info.qchizu.jp （現在はWordPressで運用中）
 
 ---
@@ -24,8 +24,8 @@
 - [x] ディレクトリ構造作成
 - [x] Content Collections設定（`src/content.config.ts`）
 - [x] レイアウト実装（`Base.astro`, `Article.astro`）
-- [x] コンポーネント実装（`Header.astro`, `Footer.astro`）
-- [x] ページ実装（`index.astro`, `[slug].astro`）
+- [x] コンポーネント実装（`Header.astro`, `Footer.astro`, `Sidebar.astro`）
+- [x] ページ実装（`index.astro`, `[slug].astro`, `posts.astro`, `guides.astro`）
 - [x] WordPress移行スクリプト作成（`scripts/migrate-wp.js`）
 - [x] WordPress記事移行実行（34記事: 投稿8件、固定ページ26件）
 - [x] 画像ファイル移行（日本語ファイル名対応済み）
@@ -34,37 +34,52 @@
 - [x] トップページをpost-21の内容に変更
 - [x] CSSの調整（シンプル化、テーマカラー維持、見出しスタイル整備）
 - [x] **記事の構成整理・ナビゲーション改善**
-  - 記事を3種類に分類（page: 8件、guide: 12件、post: 9件）
-  - ドロップダウン式ナビゲーション実装（ハンバーガーメニュー対応）
+  - 記事を3種類に分類（page: 5件、guide: 12件、post: 8件）
+  - フラットヘッダー＋サイドバーナビゲーション実装（ハンバーガーメニュー対応）
   - 一覧ページ作成（`/posts`, `/guides`）
   - type別の日付表示（post: 目立たせる、guide: 控えめ、page: 非表示）
-  - 不要記事削除（`qchizu.md`, `knowledge.md`）
+  - 不要記事削除・統合（`improve.md`→`minna.md`、`tile.md`→`about.md`等）
   - ファビコン設定
-
-### 未完了の事項
-
-- [ ] **各記事の記載内容整理**
-  - 内容の確認・更新
-  - 必要に応じて記事を統合
-
-- [ ] **記事の書き方の整理**
-  - 公用文の書き方に倣う
-  - 例: 「及び」「又は」「御利用」など
-
+- [x] **記事品質改善**
+  - 画像パス修正、べき乗表記復元、テキスト修正
+  - テーブル・見出し・リンクの一括整備
 - [x] **GitHub Secretsの登録**
-  - `SSH_PRIVATE_KEY`: SSH秘密鍵
-  - `SSH_HOST`: Xserverホスト名
-  - `SSH_USER`: SSHユーザー名
-  - 既存のqchizuリポジトリと共有可能
-
+  - `SSH_PRIVATE_KEY`, `SSH_HOST`, `SSH_USER`
 - [x] **テスト環境構築**
   - `test-info.qchizu.jp` にデプロイする構成に変更
   - トリガーを `v*` タグに統一（qchizu-mapsと同じ）
   - リリースノート自動生成を追加
 
+### 未完了の事項
+
+#### 1. 記事内容の整理
+
+- [ ] **WordPress移行元との内容差分確認**
+  - `temp_*.html`（6件）と対応するMarkdown記事を比較し、未移行の内容を補完
+  - 対象: `shinrinkihonzu.md`, `cs.md`, `bus-stop.md`, `elevation-tile.md`, `road-structures.md`, `stereo.md`
+  - 確認完了後、`temp_*.html` ファイルを削除
+
+- [x] **各記事の内容確認・更新**
+  - 内部リンクが正しいことを確認済み（全25記事）
+  - iframe未復元1件（road-structures.md）を復元済み
+
+#### 2. 表記ルールの統一
+
+- [x] **公用文の書き方に倣った表記統一**
+  - 敬語表記の統一: 漢語は「御」（御利用、御覧、御活用、御支援、御所属等）、和語は「お」のまま（お名前、お知らせ等）
+  - 接続詞の統一: 「及び」「又は」「並びに」を適切に使用
+  - 送り仮名の統一: 「行う」（「行なう」は不可）
+
+#### 3. 本番環境への移行
+
 - [ ] **リダイレクト設定**
-  - 現行サイトのURLから一部変更になるため、リダイレクトを設定
-  - `.htaccess` または Xserver側で対応
+  - 現行サイト（WordPress）のURLから変更になるページのリダイレクトを設定
+  - `.htaccess` 又は Xserver側で対応
+
+- [ ] **本番デプロイ設定**
+  - `astro.config.mjs` の `site` を `https://info.qchizu.jp` に変更
+  - デプロイワークフローのデプロイ先を本番ディレクトリに変更
+  - DNS・サーバー設定の切り替え
 
 ---
 
@@ -74,15 +89,17 @@
 qchizu-info/
 ├── src/
 │   ├── content/
-│   │   └── articles/       # 記事（*.md）
+│   │   └── articles/       # 記事（*.md）25件
+│   ├── content.config.ts   # Content Collections設定
 │   ├── layouts/
 │   │   ├── Base.astro      # 共通HTMLレイアウト
 │   │   └── Article.astro   # 記事レイアウト
 │   ├── components/
-│   │   ├── Header.astro
-│   │   └── Footer.astro
+│   │   ├── Header.astro    # ヘッダー（ハンバーガーメニュー対応）
+│   │   ├── Footer.astro    # フッター
+│   │   └── Sidebar.astro   # サイドバーナビゲーション
 │   └── pages/
-│       ├── index.astro     # トップページ（post-21の内容）
+│       ├── index.astro     # トップページ（home.mdの内容）
 │       ├── [slug].astro    # 記事ページ
 │       ├── posts.astro     # ブログ一覧
 │       └── guides.astro    # 使い方ガイド一覧
@@ -139,7 +156,7 @@ order: 10
 | 項目 | 表記例 |
 |------|--------|
 | 接続詞 | 及び、並びに、又は、若しくは |
-| 敬語 | 御利用、御覧、御確認 |
+| 敬語 | 漢語は「御」（御利用、御覧、御確認）、和語は「お」（お名前、お知らせ） |
 | 送り仮名 | 行う、行なう→行う |
 
 ## デプロイ手順
