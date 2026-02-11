@@ -69,8 +69,8 @@ python gdal2NPtiles.py --numerical merge.vrt output_folder -z 10-18 --xyz --proc
 *   `--numerical-resolution`: 標高分解能を設定
     *   デフォルト: 0.01mで通常はOKなので、省略可。
 *   `-z`: 生成するズームレベルを指定（例: `-z 10-18`）
-*   –xyz: XYZタイルを生成（付けない場合、TMSが生成される）
-*   `--processes`: 並列処理数を指定（例: `--processes=`16）
+*   `--xyz`: XYZタイルを生成（付けない場合、TMSが生成される）
+*   `--processes`: 並列処理数を指定（例: `--processes=16`）
 
 ## 作成した標高タイルの確認（全国Q地図MapLibre版の利用）
 
