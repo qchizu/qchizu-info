@@ -18,7 +18,7 @@ toc: false
 
 ## 新着情報
 
-*   2026.1.17　地形判読のための実体視機能を公開しました。[詳細](/stereo)
+*   2026.1.17　地形判読のための実体視機能を公開しました。[詳細](/stereo-viewing)
 *   2026.1.12　ドメインをqchizu.xyzからqchizu.jpに移行しました。なお、リダイレクトを行っているため、従来のURLでもアクセス可能です（タイル（mapdata.qchizu.xyz及びmapdata.qchizu2.xyz）については、今後移行予定）。
 *   2026.1.10　海上保安庁「海しる」の情報が閲覧できるようになりました。例：[灯台](https://maps.qchizu.jp/#11/31.425734/131.383781/&base=pale&ls=pale%7Cmsil_lights-lighthouse&disp=11&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)
 
@@ -32,7 +32,7 @@ toc: false
 
 ![](/images/image.png)
 
-DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[MPI赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2mpirrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[CS立体図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2cs&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2cs&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[等高線](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2contour&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](/rrim)）
+DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[MPI赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2mpirrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[CS立体図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2cs&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2cs&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[等高線](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2contour&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](/rrim-cs-viewer)）
 
 ### 全国の橋の名前が知りたい！
 
@@ -94,7 +94,7 @@ DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&ba
 
 ![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2024-01-07-121017.png)
 
-[全国Ｑ地図MapLibre版](https://maps.qchizu.jp/maplibre/#12.94/35.36053/138.73548) ([紹介ページ](/maplibre))
+[全国Ｑ地図MapLibre版](https://maps.qchizu.jp/maplibre/#12.94/35.36053/138.73548) ([紹介ページ](/maplibre-viewer))
 
 ## サイトの特長
 

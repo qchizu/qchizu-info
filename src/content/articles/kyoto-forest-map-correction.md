@@ -83,4 +83,4 @@ type: post
 
 [京都府森林基本図を全国Q地図で見る](https://maps.qchizu.jp/#10/35.147424/135.579529/&base=std&ls=std%7C26p_kyoto_f_01&blend=0&disp=11&lcd=26p_kyoto_f_01&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0)
 
-京都府森林基本図の詳細については、[森林基本図](/shinrinkihonzu)のページも御参照ください。
+京都府森林基本図の詳細については、[森林基本図](/forest-basemap)のページも御参照ください。
