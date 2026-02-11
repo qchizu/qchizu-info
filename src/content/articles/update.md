@@ -2,7 +2,7 @@
 title: "更新情報"
 description: "全国Q地図の更新情報を掲載しています。"
 date: 2021-09-12
-type: post
+type: page
 ---
 
 全国Q地図の更新情報
