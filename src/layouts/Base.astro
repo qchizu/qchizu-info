@@ -50,8 +50,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <style is:global>
   :root {
     --theme-color: #e6b422;
-    --max-width: 860px;
-    --max-width-with-sidebar: 1100px;
+    --max-width: 800px;
+    --max-width-with-sidebar: 1072px;
   }
 
   * {
@@ -91,6 +91,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* ページレイアウト（サイドバー付き） */
+  .page-layout {
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width-with-sidebar);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .page-layout main {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .page-layout {
+      flex-direction: column;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -137,5 +161,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   ul, ol {
     padding-left: 1.5rem;
+  }
+
+  /* GitHub Alerts (NOTE) */
+  .markdown-alert {
+    margin: 1em 0;
+    padding: 0.6em 1em;
+    background-color: #f5f5f5;
+    border-left: 3px solid #ccc;
+    border-radius: 0;
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .markdown-alert p {
+    margin-bottom: 0.4em;
+  }
+
+  .markdown-alert p:last-child {
+    margin-bottom: 0;
+  }
+
+  .markdown-alert-title {
+    font-size: 0;
+    color: #999;
+    margin-bottom: 0.2em;
+  }
+
+  .markdown-alert-title svg {
+    display: none;
+  }
+
+  .markdown-alert-title::after {
+    content: "補足";
+    font-size: 0.8rem;
+    font-weight: bold;
   }
 </style>

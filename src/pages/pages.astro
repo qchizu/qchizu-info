@@ -36,23 +36,6 @@ const pages = articles
 </Base>
 
 <style>
-  .page-layout {
-    display: flex;
-    width: 100%;
-    max-width: var(--max-width-with-sidebar);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .page-layout :global(main) {
-    flex: 1;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-  }
-
   h1 {
     margin-bottom: 0.5rem;
   }
@@ -82,11 +65,5 @@ const pages = articles
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1.4;
-  }
-
-  @media (max-width: 768px) {
-    .page-layout {
-      flex-direction: column;
-    }
   }
 </style>
