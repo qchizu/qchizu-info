@@ -32,8 +32,8 @@ describe("リンク検証", () => {
       // フロントマター部分を除外して本文のみ取得
       const body = content.replace(/^---[\s\S]*?---/, "");
 
-      // 内部リンクの検証: Markdown リンク [text](/path) 形式
-      const internalLinks = [...body.matchAll(/\[([^\]]*)\]\(\/([^)]*)\)/g)];
+      // 内部リンクの検証: Markdown リンク [text](/path) 形式（画像構文 ![]() を除外）
+      const internalLinks = [...body.matchAll(/(?<!!)\[([^\]]*)\]\(\/([^)]*)\)/g)];
 
       for (const match of internalLinks) {
         const linkPath = match[2];

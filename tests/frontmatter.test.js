@@ -10,6 +10,8 @@ const mdFiles = fs
 
 // home.md はトップページ用で title を空にしている（意図的な例外）
 const titleExempt = new Set(["home"]);
+// 既存記事で略語セグメントを含むもの（公開済みのためslug変更不可）
+const abbreviationExempt = new Set(["cs-parameter", "rrim-cs-viewer"]);
 
 describe("フロントマター検証", () => {
   for (const file of mdFiles) {
@@ -78,6 +80,15 @@ describe("フロントマター検証", () => {
 
       it("slug命名規則: 連続ハイフン (--) を含まない", () => {
         assert.ok(!slug.includes("--"), `slug "${slug}" に連続ハイフンが含まれています`);
+      });
+
+      it("slug命名規則: 1〜2文字の略語を含まない", { skip: abbreviationExempt.has(slug) }, () => {
+        const parts = slug.split("-");
+        const short = parts.filter((p) => p.length <= 2 && !/^\d+$/.test(p));
+        assert.ok(
+          short.length === 0,
+          `slug "${slug}" に短い略語 [${short.join(", ")}] が含まれています`
+        );
       });
 
       it("slug命名規則: 1〜4パーツ (ハイフン区切り)", () => {
