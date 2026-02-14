@@ -31,10 +31,14 @@ qchizu-info/
 
 1. 記事を編集・追加し、master ブランチに push
 2. タグを作成: `git tag v20260131 && git push origin v20260131`
-3. GitHub Actions が自動でビルド・Xserver へデプロイ
-
-現在はテスト環境（https://test-info.qchizu.jp ）にデプロイしています。
+3. GitHub Actions が自動でビルド・Xserver へデプロイ（https://info.qchizu.jp）
 
 ## 記事の追加・編集
 
 `src/content/articles/` にMarkdownファイルを配置します。詳細は `SPEC.md` を参照してください。
+
+## ライセンス
+
+このリポジトリのすべてのコンテンツ（記事、コード、画像等）は、[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) の下でライセンスされています。
+
+出典を明記すれば、自由に利用・改変・再配布できます。詳細は [LICENSE](./LICENSE) を参照してください。
