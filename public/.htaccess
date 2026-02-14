@@ -1,7 +1,8 @@
 RewriteEngine On
 
 # ===== 投稿（posts）: /YYYY/MM/DD/{slug}/ 形式 =====
-RewriteRule ^2025/03/30/gdal2nptiles/?$ /how-to-make-elevation-tiles/ [R=301,L]
+RewriteRule ^2025/03/30/gdal2nptiles/?$ /making-elevation-tiles/ [R=301,L]
+RewriteRule ^how-to-make-elevation-tiles/?$ /making-elevation-tiles/ [R=301,L]
 RewriteRule ^2025/03/15/rinya-elevation-tiles/?$ /rinya-elevation-tiles/ [R=301,L]
 RewriteRule ^2024/12/29/elevation-tile/?$ /elevation-tile/ [R=301,L]
 RewriteRule ^2024/11/11/foss4g2024/?$ /foss4g2024/ [R=301,L]

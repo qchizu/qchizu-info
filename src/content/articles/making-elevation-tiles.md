@@ -78,4 +78,4 @@ python gdal2NPtiles.py --numerical merge.vrt output_folder -z 10-18 --xyz --proc
 
 サイドバーの標高データで、「【外部タイル】」を選択し、タイルのURLを指定してください。
 
-![](/images/how-to-make-elevation-tiles-1.png)
+![標高タイルの外部タイル読み込み画面](/images/making-elevation-tiles-1.png)

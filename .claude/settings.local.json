@@ -6,7 +6,6 @@
       "WebFetch(domain:docs.astro.build)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(npm install)",
       "Bash(npm run build:*)",
       "Bash(WP_SITE_URL=https://info.qchizu.jp npm run migrate:*)",
       "Bash(grep:*)",
@@ -50,13 +49,14 @@
       "WebFetch(domain:www.npmjs.com)",
       "Bash(npm install:*)",
       "Bash(npx playwright install:*)",
-      "Bash(timeout:*)",
-      "Bash(node -e:*)",
       "Bash(gh pr comment:*)",
       "Bash(gh pr view:*)",
       "Bash(gh repo view:*)",
       "Bash(git pull:*)",
-      "Bash(vercel:*)"
+      "Bash(vercel --version)",
+      "Bash(npm test:*)",
+      "Bash(while read slug)",
+      "Bash(do echo \"$slug\")"
     ]
   }
 }
