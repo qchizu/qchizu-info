@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 
 const topPage = await getEntry('articles', 'home');
 const { Content } = topPage ? await render(topPage) : { Content: null };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Base
@@ -18,13 +19,9 @@ const { Content } = topPage ? await render(topPage) : { Content: null };
       {Content ? <Content /> : <p>コンテンツが見つかりません。</p>}
     </div>
     <p class="articles-link">
-      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/pages`}
-        >Q地図について</a
-      >　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/guides`}
+      <a href={`${base}/pages`}>Q地図について</a>　|　<a href={`${base}/guides`}
         >ガイド一覧</a
-      >　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts`}
-        >ブログ一覧</a
-      >
+      >　|　<a href={`${base}/posts`}>ブログ一覧</a>
     </p>
   </main>
   <Footer />

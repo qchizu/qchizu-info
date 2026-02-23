@@ -54,7 +54,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-        // eslint-disable-next-line prefer-rest-params
+        // eslint-disable-next-line prefer-rest-params -- GA4標準スニペットのため変更不可
         dataLayer.push(arguments);
       }
       gtag('js', new Date());

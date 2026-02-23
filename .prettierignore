@@ -4,3 +4,5 @@ node_modules/
 public/
 # 記事コンテンツ（散文テキスト）はフォーマット対象外
 src/content/
+# テストファイル（node:testで使用するテストコード）
+tests/
