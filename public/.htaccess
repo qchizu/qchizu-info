@@ -53,7 +53,7 @@ RewriteRule ^author(/.*)?$ /info/ [R=301,L]
 RewriteRule ^page/\d+/?$ /info/ [R=301,L]
 
 # 日付形式の投稿URL（個別ルールにマッチしなかった場合）→ ブログ一覧
-RewriteRule ^(\d{4})/(\d{2})/(\d{2})/.+ /info/posts/ [R=301,L]
+RewriteRule ^(\d{4})/(\d{2})/(\d{2})(/.*)?$ /info/posts/ [R=301,L]
 
 # 年月アーカイブ → ブログ一覧
 RewriteRule ^(\d{4})/(\d{2})/?$ /info/posts/ [R=301,L]
@@ -64,6 +64,8 @@ RewriteCond %{QUERY_STRING} ^(p|s|attachment_id)=
 RewriteRule ^$ /info/ [R=301,QSD,L]
 
 # ===== WordPress特有のURLを410 Goneで返す =====
+# ※ wp-content/uploadsへのリダイレクトは上記で処理済み。
+#   ここに到達するwp-contentリクエストはテーマ・プラグイン等の不要ファイル
 RewriteRule ^wp-admin(/.*)?$ - [R=410,L]
 RewriteRule ^wp-login\.php$ - [R=410,L]
 RewriteRule ^xmlrpc\.php$ - [R=410,L]
