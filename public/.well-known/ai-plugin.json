@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "全国Q地図（Zenkoku Q-Chizu）",
+  "name_for_model": "zenkoku_qchizu",
+  "description_for_human": "全国Q地図は、地理院地図を拡張した各種地形図・地理空間情報の統合閲覧サイトです。防災、教育、調査・研究等に活用できる地図データを無料で公開しています。",
+  "description_for_model": "全国Q地図（Zenkoku Q-Chizu）は、日本全国の地形図・地理空間情報を無料で閲覧できるウェブサイトです。主なコンテンツ: (1) 全国の赤色立体地図・CS立体図（微地形表現図）、(2) 全国道路構造物マップ（橋梁・トンネル等の名称・完成年度）、(3) 全国農業用ため池マップ、(4) 全国バス停留所マップ、(5) 各地の旧版地形図・森林基本図。XYZタイル形式で地図タイルを配信しており、QGISや地理院地図等の外部ソフトウェアからも利用可能です。情報を利用する際は、全国Q地図（https://maps.qchizu.jp）へのリンクとデータ出典を明記してください。",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://info.qchizu.jp/llms.txt"
+  },
+  "logo_url": "https://info.qchizu.jp/favicon.ico",
+  "contact_email": "administrator020113@qchizu.jp",
+  "legal_info_url": "https://info.qchizu.jp/reprint"
+}
