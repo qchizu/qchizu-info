@@ -41,45 +41,74 @@ const isBlogExpanded = currentType === 'post';
 
 <aside class="sidebar">
   <button class="sidebar-toggle" aria-expanded="false">
-    <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <svg
+      class="toggle-icon"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+    >
+      <path
+        d="M2 4h12M2 8h12M2 12h12"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"></path>
     </svg>
     記事ナビ
-    <svg class="toggle-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
-      <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg
+      class="toggle-chevron"
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+    >
+      <path
+        d="M4 2l4 4-4 4"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
     </svg>
   </button>
 
   <nav class="sidebar-nav">
     <section class="sidebar-section">
-      <h3 class="sidebar-heading"><a href={`${base}/pages`}>Q地図について</a></h3>
+      <h3 class="sidebar-heading">
+        <a href={`${base}/pages`}>Q地図について</a>
+      </h3>
       <ul>
-        {pages.map((article) => (
-          <li>
-            <a
-              href={`${base}/${article.id}`}
-              class:list={[{ 'is-current': article.id === currentSlug }]}
-            >
-              {article.data.title}
-            </a>
-          </li>
-        ))}
+        {
+          pages.map((article) => (
+            <li>
+              <a
+                href={`${base}/${article.id}`}
+                class:list={[{ 'is-current': article.id === currentSlug }]}
+              >
+                {article.data.title}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-heading"><a href={`${base}/guides`}>使い方ガイド</a></h3>
+      <h3 class="sidebar-heading">
+        <a href={`${base}/guides`}>使い方ガイド</a>
+      </h3>
       <ul>
-        {guides.map((article) => (
-          <li>
-            <a
-              href={`${base}/${article.id}`}
-              class:list={[{ 'is-current': article.id === currentSlug }]}
-            >
-              {article.data.title}
-            </a>
-          </li>
-        ))}
+        {
+          guides.map((article) => (
+            <li>
+              <a
+                href={`${base}/${article.id}`}
+                class:list={[{ 'is-current': article.id === currentSlug }]}
+              >
+                {article.data.title}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </section>
 
@@ -87,21 +116,34 @@ const isBlogExpanded = currentType === 'post';
       <details class="blog-details" open={isBlogExpanded}>
         <summary class="blog-summary">
           <h3 class="sidebar-heading"><a href={`${base}/posts`}>ブログ</a></h3>
-          <svg class="blog-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            class="blog-chevron"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M4 2l4 4-4 4"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
           </svg>
         </summary>
         <ul>
-          {posts.map((post) => (
-            <li>
-              <a
-                href={`${base}/${post.id}`}
-                class:list={[{ 'is-current': post.id === currentSlug }]}
-              >
-                {post.data.title}
-              </a>
-            </li>
-          ))}
+          {
+            posts.map((post) => (
+              <li>
+                <a
+                  href={`${base}/${post.id}`}
+                  class:list={[{ 'is-current': post.id === currentSlug }]}
+                >
+                  {post.data.title}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </details>
     </section>
@@ -140,14 +182,16 @@ const isBlogExpanded = currentType === 'post';
     text-align: left;
     align-items: center;
     gap: 0.4rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
 
   .sidebar-toggle:hover {
     border-color: var(--theme-color);
   }
 
-  .sidebar-toggle[aria-expanded="true"] {
+  .sidebar-toggle[aria-expanded='true'] {
     border-color: var(--theme-color);
     box-shadow: 0 0 0 1px var(--theme-color);
   }
@@ -164,7 +208,7 @@ const isBlogExpanded = currentType === 'post';
     transition: transform 0.2s;
   }
 
-  .sidebar-toggle[aria-expanded="true"] .toggle-chevron {
+  .sidebar-toggle[aria-expanded='true'] .toggle-chevron {
     transform: rotate(90deg);
   }
 
@@ -255,7 +299,10 @@ const isBlogExpanded = currentType === 'post';
     text-decoration: none;
     border-left: 2px solid transparent;
     line-height: 1.5;
-    transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+    transition:
+      color 0.15s,
+      background-color 0.15s,
+      border-color 0.15s;
   }
 
   .sidebar-section a:hover {

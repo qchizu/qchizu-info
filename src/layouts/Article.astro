@@ -20,7 +20,15 @@ interface Props {
   headings?: Heading[];
 }
 
-const { title, description, date, type = 'post', slug, toc = true, headings = [] } = Astro.props;
+const {
+  title,
+  description,
+  date,
+  type = 'post',
+  slug,
+  toc = true,
+  headings = [],
+} = Astro.props;
 const h2Headings = headings.filter((h) => h.depth === 2);
 
 const formatDate = (date: Date) => {
@@ -39,38 +47,48 @@ const formatDate = (date: Date) => {
     <main>
       <article class={`article article-${type}`}>
         <header class="article-header">
-          {type === 'post' && (
-            <time class="date-prominent" datetime={date.toISOString()}>
-              {formatDate(date)}
-            </time>
-          )}
+          {
+            type === 'post' && (
+              <time class="date-prominent" datetime={date.toISOString()}>
+                {formatDate(date)}
+              </time>
+            )
+          }
           <h1>{title}</h1>
-          {type === 'guide' && (
-            <time class="date-subtle" datetime={date.toISOString()}>
-              更新: {formatDate(date)}
-            </time>
-          )}
+          {
+            type === 'guide' && (
+              <time class="date-subtle" datetime={date.toISOString()}>
+                更新: {formatDate(date)}
+              </time>
+            )
+          }
         </header>
         <div class="article-content">
-          {toc && h2Headings.length >= 2 && (
-            <nav class="toc">
-              <h2 class="toc-title">目次</h2>
-              <ol>
-                {h2Headings.map((h) => (
-                  <li><a href={`#${h.slug}`}>{h.text}</a></li>
-                ))}
-              </ol>
-            </nav>
-          )}
+          {
+            toc && h2Headings.length >= 2 && (
+              <nav class="toc">
+                <h2 class="toc-title">目次</h2>
+                <ol>
+                  {h2Headings.map((h) => (
+                    <li>
+                      <a href={`#${h.slug}`}>{h.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )
+          }
           <slot />
         </div>
-        {type === 'guide' && (
-          <footer class="article-footer">
-            <time datetime={date.toISOString()}>
-              最終更新: {formatDate(date)}
-            </time>
-          </footer>
-        )}
+        {
+          type === 'guide' && (
+            <footer class="article-footer">
+              <time datetime={date.toISOString()}>
+                最終更新: {formatDate(date)}
+              </time>
+            </footer>
+          )
+        }
       </article>
     </main>
   </div>
@@ -173,7 +191,8 @@ const formatDate = (date: Date) => {
   }
 
   .article-content :global(code) {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family:
+      'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 0.875em;
   }
 

@@ -4,7 +4,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = '全国Q地図は、国土地理院などの地図タイルを重ね合わせて閲覧できるWebGISサイトです。' } = Astro.props;
+const {
+  title,
+  description = '全国Q地図は、国土地理院などの地図タイルを重ね合わせて閲覧できるWebGISサイトです。',
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -13,7 +16,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.ico`} />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.ico`}
+    />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title === '全国Q地図' ? title : `${title} | 全国Q地図`}</title>
@@ -21,7 +28,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
 
     <!-- OGP -->
-    <meta property="og:title" content={title === '全国Q地図' ? title : `${title} | 全国Q地図`} />
+    <meta
+      property="og:title"
+      content={title === '全国Q地図' ? title : `${title} | 全国Q地図`}
+    />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -30,172 +40,195 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={title === '全国Q地図' ? title : `${title} | 全国Q地図`} />
+    <meta
+      name="twitter:title"
+      content={title === '全国Q地図' ? title : `${title} | 全国Q地図`}
+    />
     <meta name="twitter:description" content={description} />
 
     <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK97B0X6FZ" is:inline></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JK97B0X6FZ"
+      is:inline></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        // eslint-disable-next-line prefer-rest-params -- GA4標準スニペットのため変更不可
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
       gtag('config', 'G-JK97B0X6FZ');
     </script>
+
+    <style is:global>
+      :root {
+        --theme-color: #e6b422;
+        --max-width: 800px;
+        --max-width-with-sidebar: 1072px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans',
+          'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo, sans-serif;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: #0066cc;
+      }
+
+      a:hover {
+        color: #cc0033;
+      }
+
+      main {
+        flex: 1;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* ページレイアウト（サイドバー付き） */
+      .page-layout {
+        display: flex;
+        width: 100%;
+        max-width: var(--max-width-with-sidebar);
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        gap: 2rem;
+      }
+
+      .page-layout main {
+        flex: 1;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+      }
+
+      @media (max-width: 768px) {
+        .page-layout {
+          flex-direction: column;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.4;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.3em;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        background-color: var(--theme-color);
+        padding: 0.5em 0.7em;
+        border-radius: 3px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--theme-color);
+        padding-bottom: 0.3em;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+      }
+
+      h4::before {
+        content: '■';
+        color: var(--theme-color);
+        margin-right: 0.4em;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+      h6 {
+        font-size: 0.95rem;
+      }
+
+      p,
+      ul,
+      ol {
+        margin-bottom: 1em;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.5rem;
+      }
+
+      /* GitHub Alerts (NOTE) */
+      .markdown-alert {
+        margin: 1em 0;
+        padding: 0.6em 1em;
+        background-color: #f5f5f5;
+        border-left: 3px solid #ccc;
+        border-radius: 0;
+        color: #666;
+        font-size: 0.85rem;
+        line-height: 1.7;
+      }
+
+      .markdown-alert p {
+        margin-bottom: 0.4em;
+      }
+
+      .markdown-alert p:last-child {
+        margin-bottom: 0;
+      }
+
+      .markdown-alert-title {
+        font-size: 0;
+        color: #999;
+        margin-bottom: 0.2em;
+      }
+
+      .markdown-alert-title svg {
+        display: none;
+      }
+
+      .markdown-alert-title::after {
+        content: '補足';
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <slot />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --theme-color: #e6b422;
-    --max-width: 800px;
-    --max-width-with-sidebar: 1072px;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  a {
-    color: #0066cc;
-  }
-
-  a:hover {
-    color: #cc0033;
-  }
-
-  main {
-    flex: 1;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* ページレイアウト（サイドバー付き） */
-  .page-layout {
-    display: flex;
-    width: 100%;
-    max-width: var(--max-width-with-sidebar);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .page-layout main {
-    flex: 1;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-  }
-
-  @media (max-width: 768px) {
-    .page-layout {
-      flex-direction: column;
-    }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.3em;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    background-color: var(--theme-color);
-    padding: 0.5em 0.7em;
-    border-radius: 3px;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    border-bottom: 2px solid var(--theme-color);
-    padding-bottom: 0.3em;
-  }
-
-  h4 {
-    font-size: 1.1rem;
-  }
-
-  h4::before {
-    content: "■";
-    color: var(--theme-color);
-    margin-right: 0.4em;
-  }
-
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.95rem; }
-
-  p, ul, ol {
-    margin-bottom: 1em;
-  }
-
-  ul, ol {
-    padding-left: 1.5rem;
-  }
-
-  /* GitHub Alerts (NOTE) */
-  .markdown-alert {
-    margin: 1em 0;
-    padding: 0.6em 1em;
-    background-color: #f5f5f5;
-    border-left: 3px solid #ccc;
-    border-radius: 0;
-    color: #666;
-    font-size: 0.85rem;
-    line-height: 1.7;
-  }
-
-  .markdown-alert p {
-    margin-bottom: 0.4em;
-  }
-
-  .markdown-alert p:last-child {
-    margin-bottom: 0;
-  }
-
-  .markdown-alert-title {
-    font-size: 0;
-    color: #999;
-    margin-bottom: 0.2em;
-  }
-
-  .markdown-alert-title svg {
-    display: none;
-  }
-
-  .markdown-alert-title::after {
-    content: "補足";
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-</style>

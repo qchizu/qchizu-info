@@ -24,11 +24,18 @@ const pages = articles
       <h1>Q地図について</h1>
       <p class="count">全 {pages.length} 記事</p>
       <ul class="article-list">
-        {pages.map((article) => (
-          <li>
-            <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${article.id}`} class="title">{article.data.title}</a>
-          </li>
-        ))}
+        {
+          pages.map((article) => (
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${article.id}`}
+                class="title"
+              >
+                {article.data.title}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </main>
   </div>
