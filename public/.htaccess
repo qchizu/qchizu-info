@@ -36,11 +36,31 @@ RewriteRule ^knowledge/knowledge-delite-tiles/?$ /info/ [R=301,L]
 RewriteRule ^mail/?$ /info/about/ [R=301,L]
 RewriteRule ^portfolio-yvftw29nsgyt6dpzzxnk/?$ /info/ [R=301,L]
 
+# ===== 固定ページの包括リダイレクト（個別ルールにマッチしなかった場合） =====
+RewriteRule ^qchizu/.+ /info/about/ [R=301,L]
+RewriteRule ^knowledge/.+ /info/posts/ [R=301,L]
+
 # ===== WordPress画像ファイルのリダイレクト =====
 RewriteRule ^wp-content/uploads/.*/([^/]+)$ /info/images/$1 [R=301,L]
 
+# ===== WordPress旧URLパターンの包括リダイレクト =====
+# タグ・カテゴリー・著者ページ → トップページ
+RewriteRule ^tag(/.*)?$ /info/ [R=301,L]
+RewriteRule ^category(/.*)?$ /info/ [R=301,L]
+RewriteRule ^author(/.*)?$ /info/ [R=301,L]
+
+# ページネーション → トップページ
+RewriteRule ^page/\d+/?$ /info/ [R=301,L]
+
+# 日付形式の投稿URL（個別ルールにマッチしなかった場合）→ ブログ一覧
+RewriteRule ^(\d{4})/(\d{2})/(\d{2})/.+ /info/posts/ [R=301,L]
+
+# 年月アーカイブ → ブログ一覧
+RewriteRule ^(\d{4})/(\d{2})/?$ /info/posts/ [R=301,L]
+RewriteRule ^(\d{4})/?$ /info/posts/ [R=301,L]
+
 # ===== WordPressクエリパラメーター形式のリダイレクト =====
-RewriteCond %{QUERY_STRING} ^p=
+RewriteCond %{QUERY_STRING} ^(p|s|attachment_id)=
 RewriteRule ^$ /info/ [R=301,QSD,L]
 
 # ===== WordPress特有のURLを410 Goneで返す =====
@@ -48,4 +68,6 @@ RewriteRule ^wp-admin(/.*)?$ - [R=410,L]
 RewriteRule ^wp-login\.php$ - [R=410,L]
 RewriteRule ^xmlrpc\.php$ - [R=410,L]
 RewriteRule ^wp-json(/.*)?$ - [R=410,L]
+RewriteRule ^wp-content/.* - [R=410,L]
+RewriteRule ^wp-includes(/.*)?$ - [R=410,L]
 RewriteRule ^feed(/.*)?$ - [R=410,L]
