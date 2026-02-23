@@ -14,7 +14,7 @@ const { Content } = topPage ? await render(topPage) : { Content: null };
     <div class="top-content">
       {Content ? <Content /> : <p>コンテンツが見つかりません。</p>}
     </div>
-    <p class="articles-link"><a href="/pages">Q地図について</a>　|　<a href="/guides">ガイド一覧</a>　|　<a href="/posts">ブログ一覧</a></p>
+    <p class="articles-link"><a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/pages`}>Q地図について</a>　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/guides`}>ガイド一覧</a>　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts`}>ブログ一覧</a></p>
   </main>
   <Footer />
 </Base>

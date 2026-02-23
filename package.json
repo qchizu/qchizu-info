@@ -12,7 +12,8 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.16.11",
-    "remark-github-blockquote-alert": "^2.0.1"
+    "remark-github-blockquote-alert": "^2.0.1",
+    "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2"

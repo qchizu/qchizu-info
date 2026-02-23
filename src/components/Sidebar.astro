@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { currentSlug, currentType } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const allArticles = await getCollection('articles');
 
@@ -51,12 +52,12 @@ const isBlogExpanded = currentType === 'post';
 
   <nav class="sidebar-nav">
     <section class="sidebar-section">
-      <h3 class="sidebar-heading"><a href="/pages">Q地図について</a></h3>
+      <h3 class="sidebar-heading"><a href={`${base}/pages`}>Q地図について</a></h3>
       <ul>
         {pages.map((article) => (
           <li>
             <a
-              href={`/${article.id}`}
+              href={`${base}/${article.id}`}
               class:list={[{ 'is-current': article.id === currentSlug }]}
             >
               {article.data.title}
@@ -67,12 +68,12 @@ const isBlogExpanded = currentType === 'post';
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-heading"><a href="/guides">使い方ガイド</a></h3>
+      <h3 class="sidebar-heading"><a href={`${base}/guides`}>使い方ガイド</a></h3>
       <ul>
         {guides.map((article) => (
           <li>
             <a
-              href={`/${article.id}`}
+              href={`${base}/${article.id}`}
               class:list={[{ 'is-current': article.id === currentSlug }]}
             >
               {article.data.title}
@@ -85,7 +86,7 @@ const isBlogExpanded = currentType === 'post';
     <section class="sidebar-section">
       <details class="blog-details" open={isBlogExpanded}>
         <summary class="blog-summary">
-          <h3 class="sidebar-heading"><a href="/posts">ブログ</a></h3>
+          <h3 class="sidebar-heading"><a href={`${base}/posts`}>ブログ</a></h3>
           <svg class="blog-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -94,7 +95,7 @@ const isBlogExpanded = currentType === 'post';
           {posts.map((post) => (
             <li>
               <a
-                href={`/${post.id}`}
+                href={`${base}/${post.id}`}
                 class:list={[{ 'is-current': post.id === currentSlug }]}
               >
                 {post.data.title}

@@ -1,11 +1,11 @@
 ---
-
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="site-title">
-      <img src="/images/logo.png" alt="" class="site-logo" width="32" height="32" />
+    <a href={`${base}/`} class="site-title">
+      <img src={`${base}/images/logo.png`} alt="" class="site-logo" width="32" height="32" />
       全国Q地図
     </a>
 
@@ -15,15 +15,15 @@
 
     <nav class="nav" id="nav">
       <div class="nav-item">
-        <a href="/pages" class="nav-link">Q地図について</a>
+        <a href={`${base}/pages`} class="nav-link">Q地図について</a>
       </div>
 
       <div class="nav-item">
-        <a href="/guides" class="nav-link">使い方ガイド</a>
+        <a href={`${base}/guides`} class="nav-link">使い方ガイド</a>
       </div>
 
       <div class="nav-item">
-        <a href="/posts" class="nav-link">ブログ</a>
+        <a href={`${base}/posts`} class="nav-link">ブログ</a>
       </div>
 
       <div class="nav-item">
