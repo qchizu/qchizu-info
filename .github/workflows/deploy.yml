@@ -45,7 +45,7 @@ jobs:
             --exclude '.git' \
             --exclude '.github' \
             ./dist/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/qchizu/qchizu.jp/public_html/info/
 
       # GitHubリリースを作成
       - name: Create Release

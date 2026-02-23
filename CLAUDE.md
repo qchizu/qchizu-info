@@ -1,4 +1,4 @@
-# 全国Q地図 紹介ページ（info.qchizu.jp）
+# 全国Q地図 紹介ページ（qchizu.jp/info/）
 
 ## 概要
 
@@ -8,9 +8,10 @@
 - **記事形式**: Markdown（Content Collections）
 - **ホスティング**: Xserver
 - **デプロイ**: GitHub Actions（`v*` タグ push でトリガー）
-- **本番環境**: https://info.qchizu.jp
+- **本番環境**: https://qchizu.jp/info/
 - **テスト環境**: https://test-info.qchizu.jp
 - **リポジトリ**: https://github.com/qchizu/qchizu-info （プライベート）
+- **ベースパス**: `/info`（astro.config.mjsの`base`設定）
 
 ## ディレクトリ構成
 
@@ -62,6 +63,7 @@ order: 10
 ## 見出しはh2から
 
 ![画像の説明](/images/example.png)
+<!-- remarkプラグインが自動で /info/images/example.png に変換 -->
 ```
 
 ### フロントマター項目
@@ -105,7 +107,8 @@ npm run dev -- --host
 ```
 
 - WSL2環境のため、Windowsブラウザからは `localhost` ではなくWSLのIPアドレスでアクセスする
-- 例: `http://172.23.83.47:4321/`（IPアドレスは `ip addr show eth0` で確認可能）
+- 例: `http://172.23.83.47:4321/info/`（IPアドレスは `ip addr show eth0` で確認可能）
+- `base: '/info'` 設定により、ローカルでも `/info/` パスでアクセスする
 
 ## デプロイ手順
 

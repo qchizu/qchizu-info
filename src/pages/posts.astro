@@ -34,7 +34,7 @@ const formatDate = (date: Date) => {
               <time class="date" datetime={post.data.date.toISOString()}>
                 {formatDate(post.data.date)}
               </time>
-              <a href={`/${post.id}`} class="title">{post.data.title}</a>
+              <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/${post.id}`} class="title">{post.data.title}</a>
             </li>
           )
         ))}
