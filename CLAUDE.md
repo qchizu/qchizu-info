@@ -10,7 +10,7 @@
 - **デプロイ**: GitHub Actions（`v*` タグ push でトリガー）
 - **本番環境**: https://qchizu.jp/info/
 - **テスト環境**: https://test-info.qchizu.jp
-- **リポジトリ**: https://github.com/qchizu/qchizu-info （プライベート）
+- **リポジトリ**: https://github.com/qchizu-project/qchizu-info （プライベート）
 - **ベースパス**: `/info`（astro.config.mjsの`base`設定）
 
 ## ディレクトリ構成
