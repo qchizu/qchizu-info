@@ -7,7 +7,7 @@ type: post
 
 2025年3月6日、[林野庁から能登半島地震で被災した新潟県の長岡地域の標高データが公開](https://www.geospatial.jp/ckan/dataset/rinya-dem-nagaoka2024)されました。すばらしいことに、TIFファイルだけでなく、標高タイルも公開され、しかもPNG標高タイルとTerrain-RGB形式の２種類で公開されました。
 
-以前、[標高タイルの規格の比較　～なぜ全国Q地図は数値PNGタイルを採用するのか～](/elevation-tile)という記事を書きましたが、ここでは[全国Q地図MapLibre版](https://maps.qchizu.jp/maplibre/)で林野庁から公開されたタイルを表示し、タイルの規格によって実際どのような違いがあるのか比較してみました。
+以前、[標高タイルの規格の比較　～なぜ全国Q地図は数値PNGタイルを採用するのか～](/elevation-tile)という記事を書きましたが、ここでは[全国Q地図MapLibre版](https://qchizu.jp/maps/maplibre/)で林野庁から公開されたタイルを表示し、タイルの規格によって実際どのような違いがあるのか比較してみました。
 
 ## 傾斜量図
 

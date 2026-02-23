@@ -6,9 +6,9 @@ type: guide
 order: 60
 ---
 
-**全国農業用ため池マップの閲覧は[こちら](https://maps.qchizu.jp/#6/37.935533/138.120117/&base=pale&ls=pale%7Cmaff-pond20200925-6%7Cmaff-pond20200925-5%7Cmaff-pond20200925-4%7Cmaff-pond20200925-1&disp=11111&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)**
+**全国農業用ため池マップの閲覧は[こちら](https://qchizu.jp/maps/#6/37.935533/138.120117/&base=pale&ls=pale%7Cmaff-pond20200925-6%7Cmaff-pond20200925-5%7Cmaff-pond20200925-4%7Cmaff-pond20200925-1&disp=11111&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)**
 
-[![](/images/%E8%BE%B2%E6%A5%AD%E7%94%A8%E3%81%9F%E3%82%81%E6%B1%A0%E3%83%9E%E3%83%83%E3%83%97PR%E7%94%A8.jpg)](https://maps.qchizu.jp/#6/37.935533/138.120117/&base=pale&ls=pale%7Cmaff-pond20200925-6%7Cmaff-pond20200925-5%7Cmaff-pond20200925-4%7Cmaff-pond20200925-1&disp=11111&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)
+[![](/images/%E8%BE%B2%E6%A5%AD%E7%94%A8%E3%81%9F%E3%82%81%E6%B1%A0%E3%83%9E%E3%83%83%E3%83%97PR%E7%94%A8.jpg)](https://qchizu.jp/maps/#6/37.935533/138.120117/&base=pale&ls=pale%7Cmaff-pond20200925-6%7Cmaff-pond20200925-5%7Cmaff-pond20200925-4%7Cmaff-pond20200925-1&disp=11111&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)
 
 この地図は、[農業用ため池の管理及び保全に関する法律](https://www.maff.go.jp/j/nousin/bousai/bousai_saigai/b_tameike/kanrihozenhou.html)の規定に基づき、都道府県が整備した農業用ため池データベース(2020年9月25日時点)を農林水産省を通じて独自に入手し、データベースに掲載された経緯度の情報を基に地図上にプロットしたものです。
 
@@ -112,9 +112,9 @@ order: 60
 
 正確な位置が不明なためか、経緯度が市町村役場の位置になっているため池があります。
 
-例　[広島県神石高原町](https://maps.qchizu.jp/#17/34.703610/133.247766/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)
+例　[広島県神石高原町](https://qchizu.jp/maps/#17/34.703610/133.247766/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)
 
-そのほかにも、経緯度が0度0分となっていて、[赤道にプロットされているため池](https://maps.qchizu.jp/#15/0.000000/0.000000/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)があります。
+そのほかにも、経緯度が0度0分となっていて、[赤道にプロットされているため池](https://qchizu.jp/maps/#15/0.000000/0.000000/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)があります。
 
 ### この地図のほかに、池の名称が確認できる地図はありますか？
 
@@ -187,7 +187,7 @@ order: 60
 
 一方、それ以外の1:25,000の精度で整備されている区域では、おおむね25m平方以上の池が表示されることとなっていますので、小さな池は表示されません。
 
-どちらの区域かは、地理院地図で確認できるようになっています。→[全国Q地図](https://maps.qchizu.jp/#6/35.164828/137.230225/&base=std&ls=std%7Cfgd_2500_area&blend=0&disp=11&lcd=fgd_2500_area&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)で見る
+どちらの区域かは、地理院地図で確認できるようになっています。→[全国Q地図](https://qchizu.jp/maps/#6/35.164828/137.230225/&base=std&ls=std%7Cfgd_2500_area&blend=0&disp=11&lcd=fgd_2500_area&vs=c1j0h0k0l0u0t0z0r0s0m0f2&d=m)で見る
 
 なお、基準以上の池であっても、測量時の植生の状態などによっては、空中写真からの判読が困難な場合があり、取得が漏れている場合があります。
 

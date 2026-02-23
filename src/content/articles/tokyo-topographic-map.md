@@ -6,7 +6,7 @@ type: guide
 order: 80
 ---
 
-**東京都1:3,000地形図の閲覧は[こちら](https://maps.qchizu.jp/#11/35.696341/139.573746/&base=std&ls=std%7C13p_tokyo_03&blend=0&disp=11&lcd=13p_tokyo_03&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)。**
+**東京都1:3,000地形図の閲覧は[こちら](https://qchizu.jp/maps/#11/35.696341/139.573746/&base=std&ls=std%7C13p_tokyo_03&blend=0&disp=11&lcd=13p_tokyo_03&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)。**
 
 東京都が1952年(昭和27年)-1970年(昭和45年)に作成した1:3,000地形図1,525面を、測量法に基づく東京都知事の複製承認を得て、2022年10月8日から全国Ｑ地図で公開しています。
 
@@ -14,7 +14,7 @@ order: 80
 
 本ページでは、この東京都1:3,000地形図について紹介します。
 
-[![](/images/%E5%85%A8%E5%9B%BD%EF%BC%B1%E5%9C%B0%E5%9B%B3%EF%BD%9C%E5%90%84%E7%A8%AE%E5%9C%B0%E5%BD%A2%E5%9B%B3%E3%83%BB%E5%9C%B0%E5%9B%B3%E6%83%85%E5%A0%B1%E3%81%AE%E7%B5%B1%E5%90%88%E9%96%B2%E8%A6%A7%E3%82%B5%E3%82%A4%E3%83%88-11.png)](https://maps.qchizu.jp/#11/35.695504/139.567566/&base=pale&ls=pale%7C13p_tokyo_03&blend=0&disp=11&lcd=13p_tokyo_03&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)
+[![](/images/%E5%85%A8%E5%9B%BD%EF%BC%B1%E5%9C%B0%E5%9B%B3%EF%BD%9C%E5%90%84%E7%A8%AE%E5%9C%B0%E5%BD%A2%E5%9B%B3%E3%83%BB%E5%9C%B0%E5%9B%B3%E6%83%85%E5%A0%B1%E3%81%AE%E7%B5%B1%E5%90%88%E9%96%B2%E8%A6%A7%E3%82%B5%E3%82%A4%E3%83%88-11.png)](https://qchizu.jp/maps/#11/35.695504/139.567566/&base=pale&ls=pale%7C13p_tokyo_03&blend=0&disp=11&lcd=13p_tokyo_03&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)
 
 ## 東京都1:3,000地形図で分かること
 
@@ -96,9 +96,9 @@ order: 80
 
 ### 関東地方迅速測図
 
-**閲覧は[こちら](https://maps.qchizu.jp/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
+**閲覧は[こちら](https://qchizu.jp/maps/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
 
-[![](/images/tokyo-topographic-map-5.png)](https://maps.qchizu.jp/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
+[![](/images/tokyo-topographic-map-5.png)](https://qchizu.jp/maps/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
 
 縮尺：1:20,000　測量年：1880年(明治13年)～1886年(明治19年)　作成：陸軍参謀本部
 
@@ -113,9 +113,9 @@ order: 80
 
 ### 東京図測量原図
 
-**閲覧は[こちら](https://maps.qchizu.jp/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
+**閲覧は[こちら](https://qchizu.jp/maps/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
 
-[![](/images/tokyo-topographic-map-6.png)](https://maps.qchizu.jp/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
+[![](/images/tokyo-topographic-map-6.png)](https://qchizu.jp/maps/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
 
 縮尺：1:5,000　測量年：1883年(明治16年)-84年(明治17年)　作成：陸軍参謀本部
 
@@ -129,7 +129,7 @@ order: 80
 
 ### 今昔マップ
 
-**閲覧は[こちら](https://maps.qchizu.jp/#16/35.681361/139.765642/&base=std&ls=std%7Ck_tokyo50_2man&blend=0&disp=11&lcd=k_tokyo50_2man&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)**　※レイヤーで年代切り替え可
+**閲覧は[こちら](https://qchizu.jp/maps/#16/35.681361/139.765642/&base=std&ls=std%7Ck_tokyo50_2man&blend=0&disp=11&lcd=k_tokyo50_2man&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)**　※レイヤーで年代切り替え可
 
 ![](/images/tokyo-topographic-map-7.png)
 
@@ -140,7 +140,7 @@ order: 80
 
 ### その他
 
-地形図ではありませんが、全国Ｑ地図・地理院地図では、古い空中写真（簡易オルソ）の閲覧が可能です（例：[1936年～1942年頃](https://maps.qchizu.jp/#17/35.681331/139.764987/&base=std&ls=std%7Cort_riku10&blend=0&disp=11&lcd=ort_riku10&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)）。
+地形図ではありませんが、全国Ｑ地図・地理院地図では、古い空中写真（簡易オルソ）の閲覧が可能です（例：[1936年～1942年頃](https://qchizu.jp/maps/#17/35.681331/139.764987/&base=std&ls=std%7Cort_riku10&blend=0&disp=11&lcd=ort_riku10&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)）。
 
 ## 参考文献
 

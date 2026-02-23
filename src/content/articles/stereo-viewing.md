@@ -10,7 +10,7 @@ order: 30
 
 従来、地形の立体的な把握には空中写真の実体視が用いられてきましたが、本機能により、航空レーザ測量による高解像度・高精度な標高データに基づく実体視が可能となります。活断層の判読や地形判読など、様々な場面で御活用ください。
 
-[すぐに実体視機能を使う](https://maps.qchizu.jp/#14/34.902792/139.089789/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim%7Cafm&blend=00&disp=110&lcd=afm&vs=c0g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=std&ls2=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend2=0&disp2=11&lcd2=03_dem_52_gsi_all_2025_1_01_dem2mpirrim)　※右上の実体視ボタンをONに切り替えてください。
+[すぐに実体視機能を使う](https://qchizu.jp/maps/#14/34.902792/139.089789/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim%7Cafm&blend=00&disp=110&lcd=afm&vs=c0g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=std&ls2=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend2=0&disp2=11&lcd2=03_dem_52_gsi_all_2025_1_01_dem2mpirrim)　※右上の実体視ボタンをONに切り替えてください。
 
 ![](/images/stereo-viewing-1.png)
 

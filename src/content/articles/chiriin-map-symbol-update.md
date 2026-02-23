@@ -37,13 +37,13 @@ type: post
 
 この記号は、沖縄県の宮古島周辺（八重干瀬など）で使用されています。例えば、「ウルグス」という注記は、何を指すか不明瞭でしたが、青い隠顕岩の記号が復活したことで、何を指しているかが明確になりました。
 
-[![](/images/chiriin-map-symbol-update-4.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort%7C99gsi_std_04&blend2=0&disp2=11&lcd2=99gsi_std_04)
+[![](/images/chiriin-map-symbol-update-4.png)](https://qchizu.jp/maps/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort%7C99gsi_std_04&blend2=0&disp2=11&lcd2=99gsi_std_04)
 
 左：2024年6月9日時点、右：2023年9月時点
 
 ちなみに、このエリアの水面下の珊瑚礁は、空中写真にもはっきりと写っています。
 
-[![](/images/chiriin-map-symbol-update-5.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort&disp2=1)
+[![](/images/chiriin-map-symbol-update-5.png)](https://qchizu.jp/maps/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort&disp2=1)
 
 ## 使用する文字
 

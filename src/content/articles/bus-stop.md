@@ -6,9 +6,9 @@ type: guide
 order: 90
 ---
 
-**全国バス停留所マップの閲覧は[こちら](https://maps.qchizu.jp/#6/37.762030/137.614746/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&vs=c0j0h0k0l0u0t0z0r0s0m0f1)。**
+**全国バス停留所マップの閲覧は[こちら](https://qchizu.jp/maps/#6/37.762030/137.614746/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&vs=c0j0h0k0l0u0t0z0r0s0m0f1)。**
 
-[![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-01-30-131838-1024x846.png)](https://maps.qchizu.jp/#6/37.762030/137.614746/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&vs=c0j0h0k0l0u0t0z0r0s0m0f1)
+[![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-01-30-131838-1024x846.png)](https://qchizu.jp/maps/#6/37.762030/137.614746/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&vs=c0j0h0k0l0u0t0z0r0s0m0f1)
 
 この地図は、[国土数値情報](https://nlftp.mlit.go.jp/index.html)として国土交通省が公開している[平成22年度時点の全国のバス停留所](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11.html)25万か所の情報を地図上にプロットしたものです。
 
