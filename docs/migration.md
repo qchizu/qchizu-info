@@ -30,7 +30,7 @@
 - [x] WordPress記事移行実行（34記事: 投稿8件、固定ページ26件）
 - [x] 画像ファイル移行（日本語ファイル名対応済み）
 - [x] GitHub Actionsデプロイワークフロー作成（`.github/workflows/deploy.yml`）
-- [x] GitHubリポジトリ作成・push（https://github.com/qchizu/qchizu-info プライベート）
+- [x] GitHubリポジトリ作成・push（https://github.com/qchizu-project/qchizu-info プライベート）
 - [x] トップページをpost-21の内容に変更
 - [x] CSSの調整（シンプル化、テーマカラー維持、見出しスタイル整備）
 - [x] **記事の構成整理・ナビゲーション改善**
