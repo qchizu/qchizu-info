@@ -176,10 +176,6 @@ npm run dev -- --host
 
 ## 残作業
 
-- **wp-content ファイルの移行**: WordPress退避ディレクトリから以下のファイルを `public/files/` にコピー
-  - 平成24年電子地形図25000図式（表示基準）.pdf → denshi-chikei25000-zushiki.pdf
-  - FOSS4G2024スライドPDF → foss4g2024-slide.pdf
-  - 全国バス停留所一覧（全国Q地図）-1.xlsx → bus-stop-list.xlsx
 - **WordPress後片付け**（2026年2月下旬目安）: 詳細は `docs/migration.md` 手順7を参照
   - Xserver上の退避ディレクトリ `info.qchizu.jp.wp-backup/` の削除
   - WordPressバックアップファイルの削除（`~/wp-backup-info-20260211.tar.gz`, `~/wp-db-backup-20260211.sql`）
