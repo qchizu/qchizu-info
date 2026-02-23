@@ -24,7 +24,7 @@ export function remarkBaseUrl(options = {}) {
 
   return (tree) => {
     visit(tree, ['link', 'image'], (node) => {
-      if (node.url.startsWith('/') && !node.url.startsWith('//')) {
+      if (node.url.startsWith('/') && !node.url.startsWith('//') && !node.url.startsWith(base + '/')) {
         node.url = base + node.url;
       }
     });
